@@ -82,6 +82,17 @@ const clearAll = () => {
   currentNumber = '0'
 }
 
+const percentage = document.querySelector(".percentage");
+
+percentage.addEventListener("click", (event) => {
+  inputPersent(event.target.value)
+  updateScreen(currentNumber)
+})
+
+inputPersent = (percent) => {
+  currentNumber = currentNumber / 100
+}
+
 const decimal = document.querySelector('.decimal')
 decimal.addEventListener('click', (event) => {
   inputDecimal(event.target.value)
